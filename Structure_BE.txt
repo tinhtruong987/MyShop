@@ -1,4 +1,4 @@
-e-shop-backend/
+myshop/
 ├── .github/                       # CI/CD workflows
 ├── docker/                        # Docker configurations
 │   ├── docker-compose.yml         # Local development setup
