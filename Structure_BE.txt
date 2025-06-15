@@ -1,0 +1,79 @@
+e-shop-backend/
+├── .github/                       # CI/CD workflows
+├── docker/                        # Docker configurations
+│   ├── docker-compose.yml         # Local development setup
+│   └── prod-docker-compose.yml    # Production setup
+│
+├── services/                      # Microservices
+│   ├── gateway/                   # API Gateway (entry point)
+│   │   ├── src/
+│   │   │   ├── api/               # API endpoints
+│   │   │   ├── core/              # Core configurations
+│   │   │   ├── main.py            # Entry point
+│   │   │   └── dependencies.py    # Shared dependencies
+│   │   ├── Dockerfile
+│   │   └── requirements.txt
+│   │
+│   ├── user-service/              # User management microservice
+│   │   ├── src/
+│   │   │   ├── api/               # API routes
+│   │   │   │   ├── v1/            # API version 1
+│   │   │   │   │   ├── endpoints/ # Endpoint handlers
+│   │   │   │   │   └── router.py  # API router
+│   │   │   ├── core/              # Core configurations
+│   │   │   │   ├── config.py      # Service configuration
+│   │   │   │   ├── security.py    # Security utilities
+│   │   │   │   └── logging.py     # Logging setup
+│   │   │   ├── db/                # Database
+│   │   │   │   ├── session.py     # DB session
+│   │   │   │   ├── base.py        # Base models
+│   │   │   │   └── repositories/  # Data access layer
+│   │   │   ├── models/            # SQLAlchemy models
+│   │   │   ├── schemas/           # Pydantic schemas
+│   │   │   ├── services/          # Business logic
+│   │   │   ├── events/            # Event handlers
+│   │   │   ├── main.py            # App entry point
+│   │   │   └── dependencies.py    # Dependencies
+│   │   ├── tests/                 # Unit and integration tests
+│   │   ├── alembic/               # Database migrations
+│   │   │   ├── versions/
+│   │   │   └── env.py
+│   │   ├── Dockerfile
+│   │   └── requirements.txt
+│   │
+│   ├── product-service/           # Product management microservice
+│   │   ├── (similar structure as user-service)
+│   │
+│   ├── order-service/             # Order management microservice
+│   │   ├── (similar structure as user-service)
+│   │
+│   ├── inventory-service/         # Inventory management microservice
+│   │   ├── (similar structure as user-service)
+│   │
+│   ├── payment-service/           # Payment processing microservice
+│   │   ├── (similar structure as user-service)
+│   │
+│   └── analytics-service/         # Analytics and reporting microservice
+│       ├── (similar structure as user-service)
+│
+├── shared/                        # Shared code between microservices
+│   ├── models/                    # Shared data models
+│   ├── utils/                     # Shared utilities
+│   └── messaging/                 # Messaging utilities (Kafka)
+│
+├── k8s/                           # Kubernetes configurations
+│   ├── base/                      # Base configurations
+│   └── overlays/                  # Environment-specific overlays
+│       ├── dev/
+│       ├── staging/
+│       └── production/
+│
+├── scripts/                       # Utility scripts
+│   ├── seed_data.py               # Seed database with initial data
+│   ├── create_service.sh          # Script to create new microservice
+│   └── deploy.sh                  # Deployment script
+│
+├── .env.example                   # Example environment variables
+├── pyproject.toml                 # Python project metadata
+├── poetry.lock                    # Poetry dependency lock
+└── README.md                      # Documentation

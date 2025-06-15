@@ -1,0 +1,64 @@
+myshop/
+├── .github/                       # CI/CD workflow configurations
+├── node_modules/                  # Dependencies
+├── src/
+│   ├── app/
+│   │   ├── core/                  # Core functionality used across the app
+│   │   │   ├── auth/              # Authentication services, guards
+│   │   │   ├── http/              # HTTP interceptors, API clients
+│   │   │   ├── models/            # Core data models/interfaces
+│   │   │   ├── services/          # Core services (logging, error handling)
+│   │   │   └── store/             # Global NgRx store configuration
+│   │   │
+│   │   ├── features/              # Feature modules (standalone components)
+│   │   │   ├── auth/              # Auth feature (login, register, etc.)
+│   │   │   │   ├── components/    # UI components
+│   │   │   │   ├── services/      # Feature specific services
+│   │   │   │   ├── store/         # Feature state management
+│   │   │   │   ├── models/        # Feature models/interfaces
+│   │   │   │   ├── guards/        # Route guards
+│   │   │   │   └── routes.ts      # Feature routing
+│   │   │   │
+│   │   │   ├── products/          # Product catalog
+│   │   │   │   ├── components/    
+│   │   │   │   ├── services/      
+│   │   │   │   ├── store/         
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   ├── cart/              # Shopping cart
+│   │   │   ├── checkout/          # Checkout process
+│   │   │   ├── admin/             # Admin dashboard
+│   │   │   │   ├── product-management/
+│   │   │   │   ├── order-management/
+│   │   │   │   ├── inventory/
+│   │   │   │   └── reports/
+│   │   │   │
+│   │   │   └── user-profile/      # User profile management
+│   │   │
+│   │   ├── shared/                # Shared components, directives, pipes
+│   │   │   ├── components/        # Reusable components (product-card, etc.)
+│   │   │   ├── directives/        # Custom directives
+│   │   │   ├── pipes/             # Custom pipes
+│   │   │   └── utils/             # Helper functions
+│   │   │
+│   │   ├── layout/                # App layout components
+│   │   │   ├── header/            
+│   │   │   ├── footer/
+│   │   │   ├── sidebar/
+│   │   │   └── main-layout/
+│   │   │
+│   │   ├── app.config.ts          # App configuration
+│   │   ├── app.routes.ts          # Main routing
+│   │   └── app.component.ts       # Root component
+│   │
+│   ├── assets/                    # Static files (images, fonts)
+│   ├── environments/              # Environment configurations
+│   ├── styles/                    # Global styles, Tailwind configuration
+│   ├── index.html                 # Main HTML
+│   └── main.ts                    # Main entry point
+│
+├── angular.json                   # Angular configuration
+├── tailwind.config.js             # Tailwind CSS configuration
+├── package.json                   # Dependencies and scripts
+├── tsconfig.json                  # TypeScript configuration
+└── README.md                      # Project documentation
